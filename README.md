@@ -13,11 +13,11 @@
 
 ## Información general
 
-A través de un CLI (Command Line Interface), el usuario podrá cifrar todas las cuentas y contraseñas que desee. Los datos se cifran con el algoritmo AES (Advanced Encryption Standard) por lo que el usuario tendrá una contraseña maestra para cifrar y decifrar los datos almacenados.  
+A través de un CLI (Command Line Interface), el usuario podrá cifrar todas las cuentas y contraseñas que desee. Los datos se cifran con el algoritmo AES (Advanced Encryption Standard) por lo que es necesaria una contraseña maestra para cifrar y descifrar los datos almacenados.  
 
 ![aes](./aes.png)
 
-La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunque el archivo almacenado sea vulnerado, el intruso no podrá ver la contraseña maestra para decifrar las cuentas almacenadas. 
+La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunque el archivo almacenado sea vulnerado, el intruso no podrá ver la contraseña maestra para descifrar las cuentas almacenadas.
 
 ## Teconogías
 * Node.js - version >= 8
@@ -38,13 +38,41 @@ La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunqu
 > node index.js
 ```
 
+## Ejemplos de código
+Función para cifrar
+```js
+function getEncryptedString(data, masterPassword) {
+  return CryptoJS.AES.encrypt(JSON.stringify({
+    accounts: data
+  }), masterPassword).toString();
+}
+```
+
+Función para descifrar
+```js
+async function getDecodedAccounts(storage, masterPassword) {
+  let decodedAccounts = {};
+  const ciphertext = await storage.getItem('accounts');
+
+  if (ciphertext) {
+    const bytes  = CryptoJS.AES.decrypt(ciphertext, masterPassword);
+    const originalText = bytes.toString(CryptoJS.enc.Utf8);
+    decodedAccounts = JSON.parse(originalText).accounts;
+  }
+
+  return decodedAccounts
+}
+```
+
+Nótese que ambas funciones hacen uso de la contraseña maestra como se muestra en el diagrama de flujo del algoritmo [AES](#información-general).
+
 ## Características
-* Agrega cuentas y contraseñas
-* Edita datos existentes
-* Muestra el nivel de seguridad de cada password
+- [x] Agrega cuentas y contraseñas
+- [x] Edita datos existentes
+- [x] Muestra el nivel de seguridad de cada password
 
 Por implementar:
-* Cambiar contraseña maestra
+- [ ] Cambiar contraseña maestra
 
 ## Contacto
 Creado por [@jlimons](https://www.jalisa.xyz/)
