@@ -1,0 +1,16 @@
+{
+  "name": "psw-manager",
+  "version": "1.0.0",
+  "description": "Password Manager System",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
+  "author": "jalisa2808@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^7.0.0",
+    "crypto-js": "^4.0.0",
+    "inquirer": "^7.3.3",
+    "node-persist": "^3.1.0"
+  }
+}
