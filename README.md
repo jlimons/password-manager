@@ -35,9 +35,7 @@ Depués de haber [instalado](#instalación) las dependencias del proyecto, ejecu
 $ node index.js
 ```
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+![exec](./psw.gif)
 
 ## Ejemplos de código
 Función para cifrar
