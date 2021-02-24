@@ -15,9 +15,9 @@
 
 A través de un CLI (Command Line Interface), el usuario podrá cifrar todas las cuentas y contraseñas que desee. Los datos se cifran con el algoritmo AES (Advanced Encryption Standard) por lo que el usuario tendrá una contraseña maestra para cifrar y decifrar los datos almacenados.  
 
-La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunque el archivo almacenado sea vulnerado, el intruso no podrá ver la contraseña maestra para decifrar las cuentas almacenadas. 
-
 ![aes](./aes.png)
+
+La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunque el archivo almacenado sea vulnerado, el intruso no podrá ver la contraseña maestra para decifrar las cuentas almacenadas. 
 
 ## Teconogías
 * Node.js - version >= 8
