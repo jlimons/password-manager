@@ -23,20 +23,21 @@ La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunqu
 * Node.js - version >= 8
 
 ## Instalación
+Ejecuta los siguiete comandos en una ventana de terminal o línea de comandos.
 ```console
-# npm
-> npm install
-> 
-
-# or yarn
-> yarn
->
+$ cd password-manager
+$ yarn
 ```
 
 ## Ejecución
+Depués de haber [instalado](#instalación) las dependencias del proyecto, ejecuta el archivo principal.
 ```console
-> node index.js
+$ node index.js
 ```
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 ## Ejemplos de código
 Función para cifrar
@@ -69,10 +70,12 @@ Nótese que ambas funciones hacen uso de la contraseña maestra como se muestra 
 ## Características
 - [x] Agrega cuentas y contraseñas
 - [x] Edita datos existentes
-- [x] Muestra el nivel de seguridad de cada password
+- [x] Muestra el nivel de seguridad de cada contraseña
+- [x] Genera contraseñas aleatorias 
 
 Por implementar:
 - [ ] Cambiar contraseña maestra
+- [ ] Configurar comando global para iniciar la ejecución
 
 ## Contacto
 Creado por [@jlimons](https://www.jalisa.xyz/)
