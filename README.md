@@ -1,6 +1,6 @@
 # Gestor de contraseñas
 
-> Este sistema almacena localmente cuentas y contraseñas de manera cifrada.
+> Sistema para gestionar y almacenar contraseñas de forma segura.
 
 ## Tabla de contenido
 * [Información general](#información-general)
@@ -23,7 +23,7 @@ La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunqu
 * Node.js - version >= 8
 
 ## Instalación
-Ejecuta los siguiete comandos en una ventana de terminal o línea de comandos.
+Clona el repositorio y ejecuta los siguiete comandos en una ventana de terminal (Linux y MacOS) o línea de comandos (Windows).
 ```console
 $ cd password-manager
 $ yarn
