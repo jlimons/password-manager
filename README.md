@@ -17,7 +17,7 @@ A través de un CLI (Command Line Interface), el usuario podrá cifrar todas las
 
 La contraseña maestra se almacena como una cadena hash SHA-256. Es decir, aunque el archivo almacenado sea vulnerado, el intruso no podrá ver la contraseña maestra para decifrar las cuentas almacenadas. 
 
-!(./aes.png)
+![aes](./aes.png)
 
 ## Teconogías
 * Node.js - version >= 8
