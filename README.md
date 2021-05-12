@@ -38,7 +38,7 @@ $ node index.js
 ![exec](./psw.gif)
 
 ## Ejemplos de código
-Función para cifrar
+Función para cifrar:
 ```js
 function getEncryptedString(data, masterPassword) {
   return CryptoJS.AES.encrypt(JSON.stringify({
@@ -47,7 +47,7 @@ function getEncryptedString(data, masterPassword) {
 }
 ```
 
-Función para descifrar
+Función para descifrar:
 ```js
 async function getDecodedAccounts(storage, masterPassword) {
   let decodedAccounts = {};
